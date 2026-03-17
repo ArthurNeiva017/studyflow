@@ -43,6 +43,8 @@ studyflow-cli/
 
 ## Instalação
 ```bash
+!Execute no Power Shell ou no CMD do Linux!
+
 git clone https://github.com/seu-usuario/studyflow-cli.git
 cd studyflow-cli
 python -m venv .venv
