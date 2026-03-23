@@ -35,3 +35,26 @@ def test_complete_task_changes_status(manager: TaskManager) -> None:
 
     assert completed['done'] is True
     assert manager.list_tasks()[0]['done'] is True
+
+
+def test_list_tasks_returns_created_items(manager: TaskManager) -> None:
+    manager.add_task('Estudar Python')
+    manager.add_task('Revisar Git e GitHub')
+
+    tasks = manager.list_tasks()
+
+    assert len(tasks) == 2
+    assert tasks[0]['title'] == 'Estudar Python'
+    assert tasks[1]['title'] == 'Revisar Git e GitHub'
+
+
+def test_remove_existing_task_updates_list(manager: TaskManager) -> None:
+    first = manager.add_task('Ler documentação do pytest')
+    manager.add_task('Treinar exercícios de lógica')
+
+    removed = manager.remove_task(first['id'])
+    remaining_tasks = manager.list_tasks()
+
+    assert removed['title'] == 'Ler documentação do pytest'
+    assert len(remaining_tasks) == 1
+    assert remaining_tasks[0]['title'] == 'Treinar exercícios de lógica'
