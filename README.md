@@ -78,6 +78,13 @@ pytest
 ```bash
 ruff check .
 ```
+## Versão do Projeto
+
+O projeto utiliza versionamento semântico no formato MAJOR.MINOR.PATCH.
+
+Versão atual: **1.0.0**
+
+A versão está declarada no arquivo `pyproject.toml` e também no arquivo `VERSION`.
 
 ## Autor
 Arthur Barroso Neiva
