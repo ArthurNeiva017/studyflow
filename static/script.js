@@ -51,7 +51,7 @@ async function loadStudyTip() {
   const data = await response.json();
 
   document.getElementById("studyTip").innerText =
-    `Dica: ${data.study_tip} | Inspiração: ${data.external_advice}`;
+    `Dica: ${data.study_tip}`;
 }
 
 loadTasks();

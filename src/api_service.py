@@ -26,7 +26,7 @@ def get_study_advice():
         return {
             "study_tip": local_tip,
             "external_advice": api_advice,
-            "source": "Advice Slip API"
+           
         }
     except (requests.RequestException, KeyError, ValueError):
         return {
