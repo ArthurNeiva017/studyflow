@@ -32,6 +32,9 @@ def get_study_advice():
     except (requests.RequestException, KeyError, ValueError):
         return {
             "study_tip": local_tip,
-            "external_advice": "Mantenha constância nos estudos e avance um passo por vez.",
+            "external_advice": (
+                "Mantenha constância nos estudos e avance "
+                "um passo por vez."
+),
             "source": "Fallback local"
         }
