@@ -10,7 +10,7 @@ STUDY_TIPS = [
     "Faça pequenos resumos com suas próprias palavras.",
     "Pratique exercícios para fixar o conteúdo estudado.",
     "Comece pelas tarefas mais importantes do dia.",
-    "Mantenha uma rotina de estudos consistente durante a semana."
+    "Mantenha uma rotina de estudos consistente durante a semana.",
 ]
 
 
@@ -27,7 +27,7 @@ def get_study_advice():
         return {
             "study_tip": local_tip,
             "external_advice": api_advice,
-           
+            "source": "Advice Slip API",
         }
     except (requests.RequestException, KeyError, ValueError):
         return {
@@ -35,6 +35,6 @@ def get_study_advice():
             "external_advice": (
                 "Mantenha constância nos estudos e avance "
                 "um passo por vez."
-),
-            "source": "Fallback local"
+            ),
+            "source": "Fallback local",
         }
